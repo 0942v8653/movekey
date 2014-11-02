@@ -1,0 +1,118 @@
+<!--
+Movekey by 0942v8653
+How to use:
+in your ~/Library/Application Support/Karabiner/private.xml:
+    <include path="movekey.xml" />
+if you put it in the same dir. If not:
+    <include path="{{ ENV_HOME }}/wherever/you/decide/to/put/movekey.xml" />
+-->
+<?xml version="1.0"?>
+<root>
+    <modifierdef>MOVEKEY</modifierdef>
+    <modifierdef>SELECTION_MOVEKEY</modifierdef>
+    <item>
+        <name>Movekey</name>
+        <appendix>https://github.com/0942v8653/movekey/</appendix>
+        
+        <!-- Movekey Choices -->
+        <item>
+            <name>Movekey Choices</name>
+            <item>
+                <name>Semicolon ;</name>
+                <identifier>io.github.0942v8653.movekey.semicolon</identifier>
+                <autogen>
+                    __KeyOverlaidModifier__
+                    KeyCode::SEMICOLON, ModifierFlag::NONE,
+                    KeyCode::VK_MODIFIER_MOVEKEY,
+                    KeyCode::SEMICOLON
+                </autogen>
+            </item>
+            <item>
+                <name>Backslash \</name>
+                <identifier>io.github.0942v8653.movekey.backslash</identifier>
+                <autogen>
+                    __KeyOverlaidModifier__
+                    KeyCode::BACKSLASH, ModifierFlag::NONE,
+                    KeyCode::VK_MODIFIER_MOVEKEY,
+                    KeyCode::BACKSLASH
+                </autogen>
+            </item>
+        </item>
+        
+        <!-- Selection Movekey Choices -->
+        <item>
+            <name>Selection Movekey Choices</name>
+            <item>
+                <name>Quote '</name>
+                <identifier>io.github.0942v8653.movekey.quote_selection</identifier>
+                <autogen>
+                    __KeyOverlaidModifier__
+                    KeyCode::QUOTE, ModifierFlag::NONE,
+                    KeyCode::VK_MODIFIER_SELECTION_MOVEKEY,
+                    KeyCode::QUOTE
+                </autogen>
+            </item>
+            <item>
+                <name>Backslash \</name>
+                <identifier>io.github.0942v8653.movekey.backslash_selection</identifier>
+                <autogen>
+                    __KeyOverlaidModifier__
+                    KeyCode::BACKSLASH, ModifierFlag::NONE,
+                    KeyCode::VK_MODIFIER_SELECTION_MOVEKEY,
+                    KeyCode::BACKSLASH
+                </autogen>
+            </item>
+        </item>
+        
+        <!-- Caps/F -->
+        <item>
+            <name>Caps/F</name>
+            <item>
+                <name>Word Move (option+left/right)</name>
+                <identifier>io.github.0942v8653.movekey.capsf_words</identifier>
+                <autogen>--KeyToKey-- KeyCode::PC_APPLICATION, ModifierFlag::MOVEKEY, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L</autogen>
+                <autogen>--KeyToKey-- KeyCode::F, ModifierFlag::MOVEKEY, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L</autogen>
+                <autogen>--KeyToKey-- KeyCode::PC_APPLICATION, ModifierFlag::SELECTION_MOVEKEY, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L</autogen>
+                <autogen>--KeyToKey-- KeyCode::F, ModifierFlag::SELECTION_MOVEKEY, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L</autogen>
+            </item>
+            <item>
+                <name>Line Move (ctrl+a/e)</name>
+                <identifier>io.github.0942v8653.movekey.capsf_lines</identifier>
+                <autogen>--KeyToKey-- KeyCode::PC_APPLICATION, ModifierFlag::MOVEKEY, KeyCode::A, ModifierFlag::CONTROL_L</autogen>
+                <autogen>--KeyToKey-- KeyCode::F, ModifierFlag::MOVEKEY, KeyCode::E, ModifierFlag::CONTROL_L</autogen>
+                <autogen>--KeyToKey-- KeyCode::PC_APPLICATION, ModifierFlag::SELECTION_MOVEKEY, KeyCode::A, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L</autogen>
+                <autogen>--KeyToKey-- KeyCode::F, ModifierFlag::SELECTION_MOVEKEY, KeyCode::E, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L</autogen>
+            </item>
+        </item>
+        
+        <item>
+            <name>Q/E</name>
+            <item>
+                <name>Word Move (option+left/right)</name>
+                <identifier>io.github.0942v8653.movekey.qe_words</identifier>
+                <autogen>--KeyToKey-- KeyCode::Q, ModifierFlag::MOVEKEY, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L</autogen>
+                <autogen>--KeyToKey-- KeyCode::E, ModifierFlag::MOVEKEY, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L</autogen>
+                <autogen>--KeyToKey-- KeyCode::Q, ModifierFlag::SELECTION_MOVEKEY, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L</autogen>
+                <autogen>--KeyToKey-- KeyCode::E, ModifierFlag::SELECTION_MOVEKEY, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L</autogen>
+            </item>
+            <item>
+                <name>Line Move (ctrl+a/e)</name>
+                <identifier>io.github.0942v8653.movekey.qe_lines</identifier>
+                <autogen>--KeyToKey-- KeyCode::Q, ModifierFlag::MOVEKEY, KeyCode::A, ModifierFlag::CONTROL_L</autogen>
+                <autogen>--KeyToKey-- KeyCode::E, ModifierFlag::MOVEKEY, KeyCode::E, ModifierFlag::CONTROL_L</autogen>
+                <autogen>--KeyToKey-- KeyCode::Q, ModifierFlag::SELECTION_MOVEKEY, KeyCode::A, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L</autogen>
+                <autogen>--KeyToKey-- KeyCode::E, ModifierFlag::SELECTION_MOVEKEY, KeyCode::E, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L</autogen>
+            </item>
+        </item>
+        
+        <item>
+            <name>WASD Arrow Keys</name>
+            <appendix>This is important!</appendix>
+            <identifier>io.github.0942v8653.movekey.wasd_arrows</identifier>
+            <autogen>--KeyToKey-- KeyCode::W, ModifierFlag::MOVEKEY, KeyCode::CURSOR_UP</autogen>
+            <autogen>--KeyToKey-- KeyCode::A, ModifierFlag::MOVEKEY, KeyCode::CURSOR_LEFT</autogen>
+            <autogen>--KeyToKey-- KeyCode::S, ModifierFlag::MOVEKEY, KeyCode::CURSOR_DOWN</autogen>
+            <autogen>--KeyToKey-- KeyCode::D, ModifierFlag::MOVEKEY, KeyCode::CURSOR_RIGHT</autogen>
+        </item>
+    </item>
+</root>
