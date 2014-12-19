@@ -21,8 +21,3 @@ And put movekey.xml in the same directory. Activate Karabiner and check the boxe
 Because I did it and it's too late to quit now.
 
 Seriously, use these *at your own risk*. You get a little too used to them after a while. If you type on another computer, be prepared to see a lot;q\*;f* of weird things like that.
-
-
-### lolhjkl!
-
-…
